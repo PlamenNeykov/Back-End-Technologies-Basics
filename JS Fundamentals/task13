@@ -1,0 +1,15 @@
+function solve (input)
+ {
+    let uniqueNames = {};
+    input.forEach(element => {
+        let keyValuePair = element.split(" ");
+        let name = keyValuePair[0];
+        let phoneNum = keyValuePair[1];
+        uniqueNames[name] = phoneNum;
+    });
+
+    for (let key in uniqueNames) 
+    {
+        console.log(`${key} -> ${uniqueNames[key]}`);
+    }
+}
